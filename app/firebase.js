@@ -3,14 +3,14 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 import { Firestore } from 'firebase/firestore';
 const firebaseConfig = {
-    apiKey: "AIzaSyCKs5X0p0dRu2mkNmFSLkyHhzmZh3JfVdY",
-    authDomain: "pantry-management-bfdd7.firebaseapp.com",
-    projectId: "pantry-management-bfdd7",
-    storageBucket: "pantry-management-bfdd7.appspot.com",
-    messagingSenderId: "318903686691",
-    appId: "1:318903686691:web:8ecc505532329018768396",
-    measurementId: "G-D5KECWCSJD"
- };
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+};
  const app = initializeApp(firebaseConfig);
  const firestore = getFirestore(app);
 const auth = getAuth(app);
