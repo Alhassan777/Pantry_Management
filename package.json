@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@huggingface/inference": "^2.8.0",
     "@mui/icons-material": "^5.16.6",
+    "@mui/material": "^5.0.0",
     "@tensorflow-models/mobilenet": "^2.1.1",
     "@tensorflow/tfjs": "^4.20.0",
     "axios": "^1.7.3",
