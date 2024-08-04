@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { signOut } from 'firebase/auth';
 import { Box, Typography, Button, Modal, CircularProgress, Snackbar, Alert, Grid, Container, AppBar, Toolbar, IconButton, Switch, Menu, MenuItem, CssBaseline } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -62,13 +63,14 @@ export default function Home() {
   }, [user]);
   const handleSignOut = async () => {
     try {
-      await signOut(auth);
-      setUser(null);
+        await signOut(auth);
+        setUser(null);
+        console.log('User signed out successfully');
     } catch (error) {
-      console.error("Failed to sign out: ", error);
+        console.error("Failed to sign out: ", error);
+        setError("Failed to sign out. Please try again.");
     }
-  };
-
+};
   const handleThemeChange = () => {
     setDarkMode(!darkMode);
   };
@@ -353,9 +355,9 @@ return (
             Pantry Manager
           </Typography>
           <Switch checked={darkMode} onChange={handleThemeChange} />
-          <IconButton color="inherit" onClick={handleSignOut}>
-            <LogoutIcon />
-          </IconButton>
+          <IconButton color="inherit" onClick={handleSignOut} disabled={!user}>
+    <LogoutIcon />
+</IconButton>
           <Menu
             id="menu-appbar"
             anchorEl={anchorEl}

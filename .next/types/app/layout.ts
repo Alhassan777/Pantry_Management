@@ -1,4 +1,4 @@
-// File: /Users/alhassanahmed/Downloads/Pantry Management/app/layout.js
+// File: /Users/alhassanahmed/Downloads/Pantry_Management/app/layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

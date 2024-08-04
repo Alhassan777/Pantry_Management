@@ -1,4 +1,4 @@
-// File: /Users/alhassanahmed/Downloads/Pantry Management/app/page.js
+// File: /Users/alhassanahmed/Downloads/Pantry_Management/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
