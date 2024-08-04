@@ -1,0 +1,6 @@
+node_modules
+.next/cache/webpack/server-production/0.pack
+.next/cache/webpack/server-development/4.pack.gz
+.venv/lib/python3.9/site-packages/torch/lib/libtorch_cpu.dylib
+./node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node
+node_modules/
